@@ -27,12 +27,16 @@ Internal sources (Fireflies, Notion, Figma) deferred to Phase 2+.
 _Why:_ External pages are HTTP-fetchable with no MCP flakiness — easier to ship and easier to ground insights in. Aligns with Romy's near-term need: walking into a new head-of-product role with market POV. Internal context only becomes interesting once Romy is producing internal artifacts in the new role.
 _Trade-off:_ Phase 1 insights are market-analyst flavored, not "personal consultant." Chrome extension gets pulled forward from Phase 3.
 
-**3. Auth model: private repo + user-held GitHub PAT.**
-Public SPA on Pages; data lives in a private repo; SPA asks for a GitHub PAT on first load and stores it in `localStorage`; SPA reads JSON from the private repo via the GitHub API.
+**3. Two-repo split, public code + private data, PAT-based access.**
+Confirmed on GitHub Free (private-repo Pages requires Pro).
 
-_Why:_ Gets "data is private" without OAuth flow, without a Worker, without Enterprise Pages. Single-user — PAT-in-localStorage is acceptable.
-_Trade-off:_ PAT must be rotated manually. The browser tab is the only access surface.
-_Plan fallback:_ If Romy is on GitHub Free (no private-repo Pages), keep the *code* repo public and put data in a second private repo `moav-romy/roam-data`. UX is identical.
+- `moav-romy/roam` — **public**. SPA code, GitHub Actions workflows, prompts, docs.
+- `moav-romy/roam-data` — **private**. All data: sources, entities, opportunities, plan items, feedback, LLM call logs.
+
+Workflows in the public repo use a PAT secret (`DATA_REPO_PAT`, `repo` scope) to read/write the private data repo. Chrome extension `repository_dispatch` targets the public repo. The SPA on Pages asks for the user's GitHub PAT on first load, stores it in `localStorage`, and reads from the private data repo via the GitHub API.
+
+_Why:_ Gets "data is private, prompts and code are open" without OAuth flow, without a Worker, without Pro. Single-user — PAT-in-localStorage is acceptable.
+_Trade-offs:_ PAT must be rotated manually. The browser tab is the only access surface. Prompt engineering is publicly visible (acceptable; arguably useful to the community).
 
 **4. No vector DB / no embeddings in Phase 1.**
 Corpus is small enough that the nightly insight job loads recent deltas into Claude with prompt caching and reasons over them directly.
