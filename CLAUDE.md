@@ -2,22 +2,32 @@
 
 Roam is a personal AI workspace for product leaders. External-intelligence ingestion → cross-source LLM analysis → ranked opportunities → actionable plan. A "Product OS" — a second brain for product work that travels across jobs and projects.
 
-**Before doing anything substantive in this repo, read:**
+**Before doing anything substantive in this repo, read the strategy docs in the private companion repo:**
 
-- [docs/PRD.md](docs/PRD.md) — product surface (Opportunities + Plan spaces)
-- [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) — six layers, Mermaid diagram, GitHub-only infra
-- [docs/DECISIONS.md](docs/DECISIONS.md) — ADR log; ADR-001 captures every foundational choice
-- [docs/ROADMAP.md](docs/ROADMAP.md) — Phase 1–4 plan + post-v1 spaces
-- [docs/ENGINEERING.md](docs/ENGINEERING.md) — sprint discipline (Think→Plan→Build→Review→Test→Ship→Reflect)
+Clone side-by-side and read:
+
+```bash
+cd ~/code
+gh repo clone moav-romy/roam-data    # private — requires user access
+```
+
+Then read in order:
+
+- `../roam-data/docs/PRD.md` — product surface (Opportunities + Plan spaces)
+- `../roam-data/docs/ARCHITECTURE.md` — six layers, Mermaid diagram, GitHub-only infra
+- `../roam-data/docs/DECISIONS.md` — ADR log; ADR-001 captures foundational choices, ADR-002 the data layout, ADR-003 the UI library
+- `../roam-data/docs/ROADMAP.md` — Phase 1–4 plan + post-v1 spaces
+- `../roam-data/docs/ENGINEERING.md` — sprint discipline (Think→Plan→Build→Review→Test→Ship→Reflect)
+- `../roam-data/docs/office-hours/` — design docs produced by `/office-hours` sessions
 
 **Key constraints (do not violate without an ADR):**
 
 - Infra is GitHub-only: Pages for UI, Actions for jobs, repo contents as DB, no servers
-- Two repos: this one (public, code) + `moav-romy/roam-data` (private, all data)
+- Two repos: this one (public, code) + `moav-romy/roam-data` (private, all docs + data)
 - Phase 1 sources: Competitor URLs + Gartner (via Chrome extension) only
 - AI principles: source grounding, reasoning chain, confidence + justification, evals as code, replayability — every output cites; every prompt has a golden test set in `evals/`
 
-**Workflow:** every meaningful change moves through gstack's Think → Plan → Build → Review → Test → Ship → Reflect. See `docs/ENGINEERING.md`.
+**Workflow:** every meaningful change moves through gstack's Think → Plan → Build → Review → Test → Ship → Reflect. See `../roam-data/docs/ENGINEERING.md`.
 
 ---
 

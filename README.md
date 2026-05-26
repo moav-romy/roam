@@ -4,16 +4,18 @@ A personal AI workspace for product leaders. Ingests professional context, runs 
 
 ## Status
 
-Phase 1 in progress. See [docs/ROADMAP.md](docs/ROADMAP.md) for what's built, what's next, and what's deferred.
+Phase 1 in progress — not yet runnable.
 
-## Quick start
+## Repo layout
 
-_Scaffolding in progress — not yet runnable._
+This is the **code** repo (public). Strategy docs, ADRs, and project data live in the companion **data** repo (private): [`moav-romy/roam-data`](https://github.com/moav-romy/roam-data).
 
-## Where to read next
+```
+~/code/
+├── roam/         ← you are here (public: code, workflows, theme, gstack hooks)
+└── roam-data/    ← private (docs, ADRs, all project data — owner access only)
+```
 
-- [docs/PRD.md](docs/PRD.md) — product surface and behavior
-- [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) — six-layer architecture + Mermaid diagram
-- [docs/ENGINEERING.md](docs/ENGINEERING.md) — sprint discipline (gstack-flavored)
-- [docs/DECISIONS.md](docs/DECISIONS.md) — ADR log
-- [docs/ROADMAP.md](docs/ROADMAP.md) — Phase 1 → Phase 4 + post-v1 spaces
+## Engineering workflow
+
+This project requires [gstack](https://github.com/garrytan/gstack) for AI-assisted work. See [CLAUDE.md](CLAUDE.md) for details.
