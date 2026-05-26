@@ -1,8 +1,6 @@
 # Roam
 
-A personal AI workspace for product leaders. Single-tenant, single-user (Romy Moav). Ingests professional context, runs cross-source analysis nightly, surfaces opportunities and plans across multiple work hats: head of product, product innovation, product marketing, product growth.
-
-Not a SaaS product. A "Product OS" / second brain that travels across jobs.
+A personal AI workspace for product leaders. Ingests professional context, runs cross-source analysis, surfaces opportunities and actionable plans across multiple work hats: product improvements, product innovation, product marketing, product growth.
 
 ## Status
 
