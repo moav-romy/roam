@@ -1,6 +1,6 @@
 # Roam — project context
 
-Roam is a personal AI workspace for product leaders. Single-tenant, single-user (Romy Moav). External-intelligence ingestion → cross-source LLM analysis → ranked opportunities → strategic plan. A "Product OS" / second brain that travels across jobs.
+Roam is a personal AI workspace for product leaders. External-intelligence ingestion → cross-source LLM analysis → ranked opportunities → actionable plan. A "Product OS" — a second brain for product work that travels across jobs and projects.
 
 **Before doing anything substantive in this repo, read:**
 
