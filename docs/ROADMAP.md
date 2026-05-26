@@ -15,7 +15,7 @@ Goal: a deployed, working slice of the Capture → Memory → Insight → Opport
 - [ ] Static SPA deployed to GitHub Pages with PAT-based access
 - [ ] LLM call log (`data/llm-calls/<date>.jsonl`) wired up
 
-Exit: Romy uses Roam every morning for a week and surfaces ≥1 promotable opportunity.
+Exit: user uses Roam every morning for a week and surfaces ≥1 promotable opportunity.
 
 ## Phase 2 (weeks 3–5) — Plan space + internal sources
 
@@ -38,7 +38,7 @@ Exit: 2–3 promotable opportunities per week, mixed sources.
 - [ ] Cost budgets + alerts
 - [ ] Prompt-injection defense audit (gstack `/cso`)
 
-Exit: trust high enough Romy would recommend to a peer PM.
+Exit: trust high enough the user would recommend to a peer PM.
 
 ## Phase 4 (weeks 7–8) — Polish + reflect
 

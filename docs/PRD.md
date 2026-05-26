@@ -34,7 +34,7 @@ User scans Opportunities, decides what's worth pursuing, and can **promote** an 
 
 ### Plan (personal strategy workspace)
 
-Where promoted opportunities become real work. Holds the user's current strategic plan — priorities, initiatives, active workstreams — across all her hats.
+Where promoted opportunities become real work. Holds the user's current strategic plan — priorities, initiatives, active workstreams — across all their hats.
 
 A Plan item includes:
 - The originating opportunity (with link back), or it can be created freehand
@@ -55,7 +55,7 @@ Plan is explicitly **not** a PRD generator or roadmap exporter in v1.
 |---|---|---|---|
 | Competitor websites | URL submission in UI | **Phase 1** | User pastes URLs, Roam fetches+parses, re-fetches weekly for changes. |
 | Gartner / analyst pages | Chrome browser extension | **Phase 1** | MV3 "Save to Roam" button captures title, URL, full text, screenshot. POSTs to a GitHub-Actions ingestion endpoint. |
-| Fireflies (meetings) | MCP connector | Phase 2 | Pulled in once Romy is in the new head-of-product role and producing meeting volume. |
+| Fireflies (meetings) | MCP connector | Phase 2 | Pulled in once the user is producing meeting volume in a role. |
 | Notion (internal docs) | MCP connector | Phase 2 | Same trigger as Fireflies. |
 | Figma (design files) | MCP connector | Phase 3 | On-demand sync once design work is active. |
 
@@ -75,10 +75,10 @@ Generic manual paste-in fallback for any input the users would like to include i
 ## Success criteria for v1
 
 - Onboarding to new projects is significantly accelerated
-- User opens Roam every morning during her first 30 days in the new role
-- 2–3 opportunities per week are promoted to Plan that she wouldn't have surfaced on her own
-- She feels visibly sharper in strategic meetings because she arrives with context Roam surfaced
-- Trust is high enough that she'd recommend it to a peer PM if it were a product
+- User opens Roam every morning during the first 30 days in a new role
+- 2–3 opportunities per week are promoted to Plan that the user wouldn't have surfaced on their own
+- User feels visibly sharper in strategic meetings because they arrive with context Roam surfaced
+- Trust is high enough that the user would recommend it to a peer PM if it were a product
 - Less than 10% of opportunities are thumbs-downed as noise
 
 ## Out of scope for v1

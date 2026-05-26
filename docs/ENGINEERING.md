@@ -19,7 +19,7 @@ Reference: [Garry Tan's gstack](https://github.com/garrytan/gstack).
 ## Why each step matters here
 
 - **`/office-hours` before planning** — Roam is an AI product; the most expensive mistakes are scope mistakes ("we built the wrong thing"). Forcing questions surface those before a line is written.
-- **Three planning reviews** — even as a solo project, role-switching between PM / eng / design hats yields better plans than coding from a hunch. Romy is the PM by default; the slash commands re-cast Claude into eng and design seats.
+- **Three planning reviews** — even as a solo project, role-switching between PM / eng / design hats yields better plans than coding from a hunch. The user holds the PM seat by default; the slash commands re-cast Claude into eng and design seats.
 - **Multi-model review** — single-model review has blind spots. A second model on `/codex` catches different bug classes.
 - **`/qa` is non-negotiable** — typecheck and tests verify code correctness, not feature correctness. Every shipped feature gets driven in a browser.
 - **`/cso` on anything ingestion-related** — external content (competitor pages, Gartner pages) is adversarial input. Prompt-injection defense is part of the security review, not an afterthought.

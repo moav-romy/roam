@@ -34,7 +34,7 @@ flowchart TB
   L5 --> L6
 
   EXT[Chrome extension<br/>Save to Roam] -->|repository_dispatch| L2
-  USER[Romy] -->|paste URL| L2
+  USER[User] -->|paste URL| L2
   USER -->|browse| L6
   USER -->|thumbs up/down| L6
   L6 -.feedback.-> L5
@@ -43,7 +43,7 @@ flowchart TB
 ## Layer-by-layer
 
 ### 1. Internal capture — _Phase 2+_
-Fireflies meeting transcripts, Notion docs, Figma design files. All via MCP connectors (with manual paste-in fallback). Deferred until Romy is in the new head-of-product role and producing internal artifact volume.
+Fireflies meeting transcripts, Notion docs, Figma design files. All via MCP connectors (with manual paste-in fallback). Deferred until the user is producing internal artifact volume that justifies the connector setup.
 
 ### 2. External intelligence — _Phase 1_
 - **Competitor URLs.** Submitted via the UI. A GitHub Action fetches and parses each URL on a weekly cron, diffs against the previous snapshot, commits new snapshots to `data/sources/compete/`.

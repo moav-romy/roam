@@ -11,7 +11,7 @@ Format: ADR-NNN, dated, with **Context / Decision / Consequences / Alternatives*
 **Status:** Accepted
 
 ### Context
-Roam is a single-tenant, single-user (Romy) personal AI workspace. Built across evenings/weekends in 6–8 weeks. The architecture needs to support source ingestion, nightly cross-source LLM analysis, a feed UI, and a Chrome extension — without burning weeks on infra or running up monthly costs.
+Roam is a single-tenant, single-user personal AI workspace. Built across evenings/weekends in 6–8 weeks. The architecture needs to support source ingestion, nightly cross-source LLM analysis, a feed UI, and a Chrome extension — without burning weeks on infra or running up monthly costs.
 
 ### Decisions
 
@@ -24,7 +24,7 @@ _Trade-off:_ Writes are commits (slow). No realtime UI. No concurrent jobs. DIY 
 **2. Phase 1 sources: Competitor URLs + Gartner (via Chrome extension).**
 Internal sources (Fireflies, Notion, Figma) deferred to Phase 2+.
 
-_Why:_ External pages are HTTP-fetchable with no MCP flakiness — easier to ship and easier to ground insights in. Aligns with Romy's near-term need: walking into a new head-of-product role with market POV. Internal context only becomes interesting once Romy is producing internal artifacts in the new role.
+_Why:_ External pages are HTTP-fetchable with no MCP flakiness — easier to ship and easier to ground insights in. Aligns with the user's near-term need: walking into a new role with market POV. Internal context only becomes interesting once the user is producing internal artifacts in a role.
 _Trade-off:_ Phase 1 insights are market-analyst flavored, not "personal consultant." Chrome extension gets pulled forward from Phase 3.
 
 **3. Two-repo split, public code + private data, PAT-based access.**
@@ -64,7 +64,7 @@ _Replacement:_ `docs/` plus the data repo's JSON/Markdown act as the persistent 
 ### Alternatives considered
 - **Vercel + Supabase + Drizzle + Postgres + pgvector.** The "right" engineering choice. Rejected for v1 to keep ops cost at zero and to lean fully into the personal-tool framing.
 - **Cloudflare Workers + D1 + Vectorize.** Coherent and cheap, but adds a platform to learn. Reserve as a possible Phase 3 destination if GitHub-only hits real limits.
-- **Phase 1 with Fireflies + Notion.** The "internal-first" sequencing. Rejected because Romy doesn't yet have internal artifact volume in the new role.
+- **Phase 1 with Fireflies + Notion.** The "internal-first" sequencing. Rejected because the user doesn't yet have internal artifact volume in a role.
 
 ---
 
